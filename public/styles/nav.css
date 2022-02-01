@@ -1,0 +1,59 @@
+.navigation {
+  box-sizing: border-box;
+  height: 120px; 
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding-top: 50px;
+  padding-right: 1.5em;
+  padding-bottom: 1em;
+  padding-left: 1.5em;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+ 
+}
+
+.item {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: flex-start;
+}
+.item2 {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: right;
+}
+
+.arrow {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  color: #40A15A;
+}
+.arrow:hover {
+  top: +10px;
+}
+
+.parent {
+  position: relative;
+}
+
+
+/* Add your code below */
+
+  .tweeter {
+    font-family: 'Bungee', cursive;
+    font-size: 1.5em;
+  }
+
+  .column  {flex-direction: column;
+    align-items: flex-end; 
+    display: flex; 
+
+
+  }
