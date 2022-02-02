@@ -22,8 +22,8 @@ body {
 }
 
 .container {
-  padding-right: 5%;
-  padding-left: 5%;
+  margin-top: 18px;
+  width: 100%;
   justify-content: center; 
   text-align: center;
   display: flex;
