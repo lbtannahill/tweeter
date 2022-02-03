@@ -1,0 +1,66 @@
+Bones for Tweet Function
+
+
+<script>
+// Test / driver code (temporary). Eventually will get this from the server.
+const tweetData = {
+  "user": {
+    "name": "Newton",
+    "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+  "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+  "created_at": 1461116232227
+}
+</script> 
+
+
+<section id="tweets"> 
+  <article class = "tweetData articlebox"> 
+    <header class="user tweetheader">
+      <div class = "avatars name"><i class="fa-solid fa-crow"></i> Ms. Crow </div>
+      <div class = "handle lightcolor"></div>
+    </header>
+  
+    <section class = "content tweetmain">
+      <div class = "text"><strong>Tweet written from input above.</strong></div>
+    </section>
+  
+    <footer class = "tweetfooter smallfont">
+      <div class ="item created_at">1 year ago</div>
+      <div class = 'item2'>
+        <i class="fa-solid fa-flag icon"></i>
+        <i class="fa-solid fa-retweet icon"></i>
+        <i class="fa-regular fa-heart icon"></i>
+       </div>
+    </footer>
+  </article>
+  </section>
+
+  <script>
+
+// create header 
+const $avatars = $('<div>').text('<i class="fa-solid fa-crow"></i> Ms. Crow ').addClass('avatars name');
+const $handle = $('<div>').text('@CrowFacts ').addClass('handle lightcolor');
+const $user = $('<header>').addClass('tweetheader');
+$user.append($avatars, $handle);
+
+//create body 
+const $text = $('<div>').text(`<strong>Tweet written from input above.</strong>`).addClass('text');
+const $content = $('<section>').addClass('content tweetmain');
+$content.append($text);
+
+// create footer
+const $created_at = $('<div>').text('1 year ago').addClass('item created_at');
+const $icons = $('<div>').text(`
+  <i class="fa-solid fa-flag icon"></i><i class="fa-solid fa-retweet icon"></i><i class="fa-regular fa-heart icon"></i>
+  `).addClass('item2');
+const $tweetfooter = $('<footer>').addClass('tweetfooter smallfont');
+$tweetfooter.append($created_at, $icons);
+    
+    
+    
+    </script>
+

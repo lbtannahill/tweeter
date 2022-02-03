@@ -39,6 +39,9 @@
   font-weight: bold; 
 }
 
+
+/* --- new tweet format  */
+
 #tweets {  background-color: #f4f1ec;
   resize: none;
   width: 90%; 
@@ -49,8 +52,6 @@
   align-items: center;
   margin: 50px;
   }
-
-
   #tweets:hover{
   box-shadow: 4px 7px #abb5d3;
   }
@@ -69,7 +70,6 @@
   margin-bottom: 15px;
   }
 
-
   .tweetmain{
   justify-content: space-between;
   box-sizing: border-box;
@@ -77,7 +77,7 @@
   margin: 0;
   display: flex;
   width: 100%;
-  
+
 
   }
 
