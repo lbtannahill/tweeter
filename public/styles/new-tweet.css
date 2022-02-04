@@ -42,7 +42,7 @@
 
 /* --- new tweet format  */
 
-#tweets {  background-color: #f4f1ec;
+.tweets {  background-color: #f4f1ec;
   resize: none;
   width: 90%; 
   border: 3px solid rgb(80, 41, 10);
@@ -61,9 +61,8 @@
   }
 
   .tweetheader {
-  justify-content: space-between;
   box-sizing: border-box;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   display: flex;
   width: 100%;
@@ -82,10 +81,8 @@
   }
 
   .tweetfooter{
-  justify-content: space-between;
+  align-items: flex-start;
   box-sizing: border-box;
-  align-items: center;
-  margin: 0;
   display: flex;
   width: 100%;
   font-size: 15px;
@@ -102,6 +99,7 @@
   .lightcolor {
     color: #96c9a3;
     font-weight: bold; 
+    margin-left: auto;
   }
 
   .parent {
@@ -112,4 +110,16 @@
 
   .new-tweet {
     margin-top: 24px; 
+  }
+
+  .text {
+    font-weight: bold; 
+  }
+
+  .right {
+    margin-left: auto;
+  }
+
+  .margin_top {
+    margin-top: 15px; 
   }

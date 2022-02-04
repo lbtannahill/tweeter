@@ -16,7 +16,7 @@ const tweetData = {
 }
 </script> 
 
-
+<div ID ="tweetcontainer">
 <section id="tweets"> 
   <article class = "tweetData articlebox"> 
     <header class="user tweetheader">
@@ -38,29 +38,5 @@ const tweetData = {
     </footer>
   </article>
   </section>
-
-  <script>
-
-// create header 
-const $avatars = $('<div>').text('<i class="fa-solid fa-crow"></i> Ms. Crow ').addClass('avatars name');
-const $handle = $('<div>').text('@CrowFacts ').addClass('handle lightcolor');
-const $user = $('<header>').addClass('tweetheader');
-$user.append($avatars, $handle);
-
-//create body 
-const $text = $('<div>').text(`<strong>Tweet written from input above.</strong>`).addClass('text');
-const $content = $('<section>').addClass('content tweetmain');
-$content.append($text);
-
-// create footer
-const $created_at = $('<div>').text('1 year ago').addClass('item created_at');
-const $icons = $('<div>').text(`
-  <i class="fa-solid fa-flag icon"></i><i class="fa-solid fa-retweet icon"></i><i class="fa-regular fa-heart icon"></i>
-  `).addClass('item2');
-const $tweetfooter = $('<footer>').addClass('tweetfooter smallfont');
-$tweetfooter.append($created_at, $icons);
-    
-    
-    
-    </script>
-
+</div>
+ 
