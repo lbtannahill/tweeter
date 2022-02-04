@@ -31,6 +31,10 @@
   padding-left: 5%;
 
 }
+#tweetcontainer {
+  justify-content: center;
+  align-items: center;
+}
 
 ::placeholder {
   padding-top: 3px; 
@@ -52,9 +56,14 @@
   align-items: center;
   margin: 50px;
   }
-  #tweets:hover{
+  .tweets:hover{
   box-shadow: 4px 7px #abb5d3;
   }
+
+  .icon {
+    padding: 5px; 
+
+}
 
   .icon:hover {
   color: #40A15A;
@@ -88,6 +97,7 @@
   font-size: 15px;
   border-top: 3px solid rgb(80, 41, 10);
   margin-top: 15px; 
+  padding-top:10px;
 
   }
 
@@ -121,5 +131,5 @@
   }
 
   .margin_top {
-    margin-top: 15px; 
+    padding: 10px; 
   }
