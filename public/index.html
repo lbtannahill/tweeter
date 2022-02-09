@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/desktop.css" type="text/css" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js" integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -51,58 +52,59 @@
 
     <!-- avatar -->
     <main class="container">
-      <header class ="avatar">
+
+
+
+<!-- 
+      // 1 -->
+
+
+
+      <section class ="avatar">
+        <div class ="avatarbackground">
         <div>
             <img src="/images/profile-hex.png"> 
         </div>
         <div>
-            <h2><strong>Your</strong> Name</h2>
+            <h2>Peppa Pig</h2>
         </div>
-    </header>
+      </div>
+    </section>
 
+ 
+
+
+    <!-- //2  -->
     <!-- Tweet input form  -->
-      <section class="new-tweet">
-        <form>
-          <form class="center" action='/tweets/' method="POST" id="wrapper">
-          <textarea name="text" id="tweet-text" class="tweetform" type="text" placeholder="What are you humming about?" id = "the-textarea"></textarea>
-          <div class = "parent">
-            <nav class='tweetbutton parent'>
+      <div id="new_tweet">
+  
+        <div id = "error1">Your tweet is too short! More lil thoughts needed.</div>
+        <div id = "error2">Your tweet is too long!! Too many lil thoughts.</div>
+        
+        <div class = "parent">
+          <form class="center" action="/tweets" method="POST" id="submitTweet">
+          <textarea name="text" id="tweet_text" class="tweetform" type="text" placeholder="What are you humming about?"></textarea>
+            
+            <nav class='tweetbutton'>
             <div class = 'item'>
-            <button type="submit" value="button" class="submitbutton">Tweet</button></form></div>
+            <button type="submit" class="submitbutton">Tweet</button></form></div>
             <div id="the-count">
             <div class = 'item2'><output name="counter" class="counter" for="tweet-text" id="current">0</output></div></div>
             </nav>
           </div>
-        </form>
-      </section>
-
-      <!-- New Tweet -->
-
-      <div id="tweetcontainer">
-        <section class="tweets"> 
-          <article class = "tweetData articlebox"> 
-            <header class="user tweetheader">
-              <div class = "avatars"><i class="fa-solid fa-crow"></i> </div>
-              <div class = "name">Ms. Crow </div>
-              <div class = "handle lightcolor">@CrowFacts</div>
-            </header>
-          
-            <section class = "content tweetmain">
-              <div class = "text"><strong>Tweet written from input above.</strong></div>
-            </section>
-          
-            <footer class = "tweetfooter smallfont">
-              <div class ="item created_at">1 year ago</div>
-              <div class = 'right'>
-                <i class="fa-solid fa-flag icon"></i>
-                <i class="fa-solid fa-retweet icon"></i>
-                <i class="fa-regular fa-heart icon"></i>
-               </div>
-            </footer>
-          </article>
-          </section>
         </div>
 
+<!-- //3 -->
+      <!-- New Tweet -->
+      
+
+      <div id="tweetcontainer">
+        
+      </div>
+        
+ 
+      
+      
     </main>
 
 

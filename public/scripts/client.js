@@ -1,46 +1,26 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
-
-
-
-
 
 $(() => {
 
 
+  const $tweetcontainer = $('#tweetcontainer')
+
   const createTweetElement = function(inputData) {
 
-  const $picture = $(`<img src="${tweetData.user.avatars}">`);
+  const $picture = $(`<img src="${inputData.user.avatars}">`);
 
   const $avatars = $($picture).addClass('avatars');
-  const $name = $('<div>').text(`${tweetData.user.name}`).addClass('name');
-  const $handle = $('<div>').text(`${tweetData.user.handle}`).addClass('handle lightcolor');
+  const $name = $('<div>').text(`${inputData.user.name}`).addClass('name');
+  const $handle = $('<div>').text(`${inputData.user.handle}`).addClass('handle lightcolor');
   const $user = $('<header>').addClass('user tweetheader');
   $user.append($avatars, $name, $handle);
   
   //create body 
-  const $text = $('<div>').text(`${tweetData.content.text}`).addClass('text');
+  const $text = $('<div>').text(`${inputData.content.text}`).addClass('text');
   const $content = $('<section>').addClass('content tweetmain');
   $content.append($text);
   
   // create footer
-    let $timeAgo = timeago.format(tweetData.created_at);  
+    let $timeAgo = timeago.format(inputData.created_at);  
 
   const $created_at = $('<div>').text($timeAgo).addClass('created_at margin-top');
   
@@ -59,27 +39,71 @@ $(() => {
   // create section
   const $tweetbox = $('<section>').addClass('tweets')
     $tweetbox.append($tweetarticle)
-  
-  const $tweetcontainer = $('#tweetcontainer')
- 
-  $tweetcontainer.append($tweetbox)
+   
+    return $tweetbox
+
   }
+
   
 
-  const $tweet = createTweetElement(tweetData);
+  const renderTweets = function(tweets) {
+    const $tweetContainer = $('.tweetcontainer');
+    $tweetContainer.empty();
+
+    for (let tweet of tweets)  {
+     let $returnValue = createTweetElement(tweet)
+     $tweetcontainer.prepend($returnValue)
+    }
+return $tweetContainer
+};
 
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
+// get info from tweets
+const loadTweets = function() {
+  $.ajax ({
+    url: '/tweets',
+    method: 'GET'
+  }).then((tweets) => {
+  renderTweets(tweets);
+})
+}
+// run
+loadTweets();
 
+$('#error1').hide();
+$('#error2').hide();
 
+// event listener for tweets
+$('#submitTweet').on('submit', function (event) {
+  event.preventDefault();
 
+  // length errors
+  const tweetLength = $('#tweet_text').val().length;
+  $('#error1').hide();
+$('#error2').hide();
 
+    if (tweetLength <= 0) {
+      $('#error2').hide();
+      $('#error1').slideDown();
+      }
+    
+    if (tweetLength > 140) {
+      $('#error1').hide();
+      $('#error2').slideDown();
+    }
+else {
+  // seralize the info from input
+  $('#error1').hide();
+$('#error2').hide();
+  const data = $(this).serialize();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: data
+    }).then(() => {
+      $('#tweet_text').val('').focus();
+      loadTweets(); })
+    }
+})
 
 });
-
-
-
-
-
-
