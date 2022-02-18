@@ -6,6 +6,14 @@ Tweeter is a simple, single-page Twitter clone. It submits a tweet and shows it 
 
 !["screenshot of Tweeter"](https://github.com/lbtannahill/tweeter/blob/master/Screen%20Shot%202022-02-08%20at%208.15.30%20PM.png)
 
+
+## Getting Started
+
+- Clone your repository onto your local device.
+- Install dependencies using the npm install command.
+- Start the web server using the npm run local command. - The app will be served at http://localhost:8080/.
+- Go to http://localhost:8080/ in your browser.
+
 ## Dependencies
 
 - Express
@@ -14,3 +22,4 @@ Tweeter is a simple, single-page Twitter clone. It submits a tweet and shows it 
 - "chance": "^1.0.2",
 - "express": "^4.13.4",
 - "md5": "^2.1.0"
+- Nodemon
