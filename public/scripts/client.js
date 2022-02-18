@@ -47,18 +47,12 @@ $(() => {
   
 
   const renderTweets = function(tweets) {
-    const $tweetContainers = $('.tweets');
-    $tweetContainers.empty();
-    const $tweetContainer = $('.tweetcontainer');
+    const $tweetContainer = $('#tweetcontainer');
     $tweetContainer.empty();
-
-
     for (let tweet of tweets)  {
      let $returnValue = createTweetElement(tweet)
-     $tweetcontainer.prepend($returnValue)
-
+     $tweetContainer.prepend($returnValue)
     }
-
 return $tweetContainer
 };
 
@@ -69,14 +63,9 @@ const loadTweets = function() {
     url: '/tweets',
     method: 'GET'
   }).then((tweets) => {
-    const $tweetContainer = $('.tweetcontainer');
-    $tweetContainer.empty();
-    const $tweetContainers = $('.tweets');
-    $tweetContainers.empty();
   renderTweets(tweets);
 })
 }
-
 // run
 loadTweets();
 
@@ -90,7 +79,7 @@ $('#submitTweet').on('submit', function (event) {
   // length errors
   const tweetLength = $('#tweet_text').val().length;
   $('#error1').hide();
-  $('#error2').hide();
+$('#error2').hide();
 
     if (tweetLength <= 0) {
       $('#error2').hide();
@@ -101,8 +90,8 @@ $('#submitTweet').on('submit', function (event) {
       $('#error1').hide();
       $('#error2').slideDown();
     }
-    else {
-      $('.counter').val('140');
+  else {
+    $('.counter').val('140');
 
   // seralize the info from input
   $('#error1').hide();
