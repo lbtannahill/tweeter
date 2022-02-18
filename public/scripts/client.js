@@ -92,6 +92,8 @@ $('#error2').hide();
       $('#error2').slideDown();
     }
 else {
+  $('.counter').val('140');
+
   // seralize the info from input
   $('#error1').hide();
 $('#error2').hide();

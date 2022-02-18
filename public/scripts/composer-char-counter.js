@@ -7,7 +7,7 @@ $(document).ready(function() {
       current = $('#current'),
       theCount = $('#the-count');
       
-    current.text(characterCount);
+    current.text(140 - characterCount);
    
     if (characterCount >= 141) {
       current.css('color', '#8f0001');
