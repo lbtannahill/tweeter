@@ -4,7 +4,8 @@ Tweeter is a simple, single-page Twitter clone. It submits a tweet and shows it 
 
 ## Screenshots
 
-!["screenshot of Tweeter"](https://github.com/lbtannahill/tweeter/blob/master/Screen%20Shot%202022-02-08%20at%208.15.30%20PM.png)
+!["screenshot of Desktop Tweeter"](https://github.com/lbtannahill/tweeter/blob/master/pictures/Screen%20Shot%202022-02-17%20at%209.12.53%20PM.png)
+!["screenshot of Mobile Tweeter"](https://github.com/lbtannahill/tweeter/blob/master/pictures/Screen%20Shot%202022-02-17%20at%209.13.00%20PM.png)
 
 
 ## Getting Started
