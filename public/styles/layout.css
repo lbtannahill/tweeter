@@ -34,3 +34,24 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+ @media only screen and (min-width: 1026px) {
+
+
+ .container {
+  margin-top: 150px;
+  width: 60%;
+  position: absolute;
+  text-align: center;
+  flex-direction: column; 
+  left: 40%;
+ }
+
+ body {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row; 
+}
+
+  }

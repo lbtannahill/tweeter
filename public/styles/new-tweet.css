@@ -113,14 +113,16 @@
   }
 
   .parent {
-    display: flex; 
     justify-content: space-between;
     width: 100%;
   }
 
-  .new_tweet {
+  #new_tweet {
     margin-top: 50px; 
-    width: 50%;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column; 
   }
 
   .text {
